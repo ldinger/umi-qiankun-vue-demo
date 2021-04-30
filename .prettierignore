@@ -1,0 +1,4 @@
+/test/fixtures
+**/*.gif
+/lib
+/applications

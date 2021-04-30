@@ -1,0 +1,12 @@
+{
+  "name": "app1",
+  "scripts": {
+    "start": "umi dev",
+    "build": "COMPRESS=none umi build",
+    "test": "umi test"
+  },
+  "devDependencies": {
+    "@umijs/plugin-model": "^2.5.7",
+    "source-map-loader": "^0.2.4"
+  }
+}

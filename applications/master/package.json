@@ -1,0 +1,11 @@
+{
+  "name": "master",
+  "scripts": {
+    "start": "umi dev",
+    "build": "COMPRESS=none umi build",
+    "test": "umi test"
+  },
+  "dependencies": {
+    "qiankun": "^2.0.22"
+  }
+}

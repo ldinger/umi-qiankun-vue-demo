@@ -1,0 +1,29 @@
+language: node_js
+node_js:
+  - lts/*
+install:
+  - yarn install
+cache:
+  directories:
+    - node_modules
+script:
+  - yarn lint
+
+before_deploy: |
+  function npm_dist_tag() {
+    if [[ "$TRAVIS_TAG" = *"-"* ]]; then
+      echo "umi2"
+    else
+      echo "umi2"
+    fi
+  }
+
+deploy:
+  edge: true
+  provider: npm
+  email: kuitos.lau@gmail.com
+  api_key: $NPM_AUTH_TOKEN
+  skip_cleanup: true
+  on:
+    tags: true
+  tag: $(npm_dist_tag)
